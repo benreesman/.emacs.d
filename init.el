@@ -8,6 +8,9 @@
 (setq package-user-dir (concat emacs-dir "elpa"))
 (setq custom-file (concat emacs-dir "custom.el"))
 
+(defvar master-dir (getenv "ADMIN_SCRIPTS"))
+(load (concat master-dir "/master.emacs") 'noerror)
+
 ;; packages
 (require 'package)
 (add-to-list 'package-archives 
