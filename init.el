@@ -35,6 +35,7 @@
 (prefer-coding-system 'utf-8)
 (ansi-color-for-comint-mode-on)
 
+;; grab bag of options
 (setq visible-bell nil
       fringe-mode (cons 4 0)
       echo-keystrokes 0.1
@@ -55,6 +56,9 @@
       make-backup-files nil
       auto-save-default nil
       xterm-mouse-mode t)
+
+;; brevity for boolean queries
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; lusty explorer
 (require 'lusty-explorer)
